@@ -1,0 +1,32 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "Weatherapp @Microverse",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack --mode development serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tadeuasarro/WeatherApp.git"
+  },
+  "author": "Tadeu A Sarro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tadeuasarro/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/tadeuasarro/WeatherApp#readme",
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "style-loader": "^2.0.0"
+  }
+}
