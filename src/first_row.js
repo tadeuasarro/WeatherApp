@@ -1,5 +1,4 @@
 const firstRow = (value) => {
-
   const container = document.createElement('div');
   container.classList.add('border-top', 'mb-3');
 
@@ -13,21 +12,21 @@ const firstRow = (value) => {
   row.classList.add('row', 'px-3');
 
   const valueInfo = [
-    ['Feels like:', value.main.feels_like],
-    ['Temperature:', value.main.temp],
-    ['Max temp:', value.main.temp_max],
-    ['Min temp:', value.main.temp_min]
-  ]
+    { label: 'Feels like:', content: value.main.feels_like },
+    { label: 'Temperature:', content: value.main.temp },
+    { label: 'Max temp:', content: value.main.temp_max },
+    { label: 'Min temp:', content: value.main.temp_min },
+  ];
 
-  for(let i = 0; i < valueInfo.length; i++){
+  for (let i = 0; i < valueInfo.length; i += 1) {
     const smallContainer = document.createElement('div');
     smallContainer.classList.add('col-3', 'd-flex', 'justify-content-between', 'py-3', 'border');
 
     const label = document.createElement('span');
-    label.innerHTML = valueInfo[i][0];
+    label.innerHTML = valueInfo[i].label;
 
     const info = document.createElement('span');
-    info.innerHTML = valueInfo[i][1] + "°C";
+    info.innerHTML = `${valueInfo[i].content}°C`;
 
     smallContainer.appendChild(label);
     smallContainer.appendChild(info);
@@ -38,7 +37,6 @@ const firstRow = (value) => {
   container.appendChild(row);
 
   return container;
-
-}
+};
 
 export default firstRow;
