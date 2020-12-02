@@ -11,7 +11,7 @@
 ![screenshot](./src/img/screenshot.png)
 
 #### Livedemo
-- [GitHub Pages](https://tadeuasarro.github.io/WeatherApp/)
+- [Githack](https://rawcdn.githack.com/tadeuasarro/WeatherApp/d1fc4101590279ac3c07d5752773a15a7b4b6f0a/dist/index.html)
 
 
 ## Getting started
