@@ -10,13 +10,17 @@ const myFunction = () => {
   searchButton.addEventListener('click', () => {
     const searchStart = document.getElementById('search_input').value;
 
-    weather(searchStart).then((value) => {
+    weather(searchStart)
+    .then((value) => {
       const mainContainer = document.getElementById('main-container');
       mainContainer.innerHTML = '';
 
       mainContainer.appendChild(weatherContainer(value));
 
       return true;
+    })
+    .catch((error) => {
+      console.log('Invalid city, please try again!');
     });
   });
 };
