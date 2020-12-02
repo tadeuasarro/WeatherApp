@@ -1,5 +1,5 @@
 import firstRow from './first_row';
-//import secondRow from './second_row';
+import secondRow from './second_row';
 
 const weatherContainer = (value) => {
 
@@ -21,9 +21,10 @@ const weatherContainer = (value) => {
 
   const infoContainer = document.createElement('div');
   infoContainer.appendChild(firstRow(value));
-  //infoContainer.appendChild(secondRow(value));
+  infoContainer.appendChild(secondRow(value));
 
   containerSuper.appendChild(container);
+  containerSuper.appendChild(infoContainer);
 
   return containerSuper;
 

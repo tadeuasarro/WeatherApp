@@ -6,15 +6,22 @@ import weatherContainer from './weather_container';
 
 const myFunction = () => {
 
-  weather('Limeira').then(function(value){
-    const mainContainer = document.getElementById('main-container');
+  const searchButton = document.getElementById('search_button');
 
-    mainContainer.appendChild(weatherContainer(value));
-    console.log(value);
+  searchButton.addEventListener('click', () => {
+    const searchStart = document.getElementById('search_input').value;
 
-    return true;
+    weather(searchStart).then(function(value){
+      const mainContainer = document.getElementById('main-container');
+      mainContainer.innerHTML = '';
 
-  });
+      mainContainer.appendChild(weatherContainer(value));
+
+      return true;
+
+    });
+
+  })
 
 }
 
