@@ -2,28 +2,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import './styles.css';
 import weather from './weather';
+import weatherContainer from './weather_container';
 
 const myFunction = () => {
 
-  weather('Limeira').then(function(values){
-    const currentWeather = values[0];
-    const weatherForecast = values[1];
-
-    /*
-
+  weather('Limeira').then(function(value){
     const mainContainer = document.getElementById('main-container');
 
-    const currentContent = document.createElement('p');
-    //currentContent.innerHTML = currentWeather;
-    console.log(currentWeather);
+    mainContainer.appendChild(weatherContainer(value));
+    console.log(value);
 
-    const forecastContent = document.createElement('p');
-    //forecastContent.innerHTML = weatherForecast;
-
-    //mainContainer.appendChild(currentContent.main);
-    //mainContainer.appendChild(forecastContent.main);
-
-    */
+    return true;
 
   });
 
