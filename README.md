@@ -11,7 +11,7 @@
 ![screenshot](./src/img/screenshot.png)
 
 #### Livedemo
-- [GitHub Pages](https://jessicafarias.github.io/TodoList/)
+- [GitHub Pages](https://tadeuasarro.github.io/WeatherApp/)
 
 
 ## Getting started
