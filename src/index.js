@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import './styles.css';
-import weather from './weather';
-import weatherContainer from './weather_container';
+import weather from './weather/weather';
+import weatherContainer from './weather/weather_container';
 
 const myFunction = () => {
   const searchButton = document.getElementById('search_button');

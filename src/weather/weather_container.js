@@ -1,5 +1,5 @@
-import firstRow from './first_row';
-import secondRow from './second_row';
+import firstRow from '../rows/first_row';
+import secondRow from '../rows/second_row';
 
 const weatherContainer = (value) => {
   const containerSuper = document.createElement('div');

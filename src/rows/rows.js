@@ -19,7 +19,6 @@ const rows = (valueInfo) => {
   }
 
   return row;
-
-}
+};
 
 export default rows;

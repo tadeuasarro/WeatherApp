@@ -1,12 +1,11 @@
 import temperatures from './temperatures';
 
 const tempButtons = (value) => {
-
   const scale = document.createElement('div');
   scale.classList.add('d-flex');
 
   const fahrenheit = document.createElement('div');
-  fahrenheit.classList.add('btn', 'btn-outline-dark')
+  fahrenheit.classList.add('btn', 'btn-outline-dark');
   fahrenheit.innerHTML = 'Fahrenheit';
   fahrenheit.addEventListener('click', () => {
     const reset = document.getElementById('temp_container');
@@ -15,7 +14,7 @@ const tempButtons = (value) => {
   });
 
   const celsius = document.createElement('div');
-  celsius.classList.add('btn', 'btn-outline-dark', 'mr-3')
+  celsius.classList.add('btn', 'btn-outline-dark', 'mr-3');
   celsius.innerHTML = 'Celsius';
   celsius.addEventListener('click', () => {
     const reset = document.getElementById('temp_container');
@@ -27,7 +26,6 @@ const tempButtons = (value) => {
   scale.appendChild(fahrenheit);
 
   return scale;
-
-}
+};
 
 export default tempButtons;

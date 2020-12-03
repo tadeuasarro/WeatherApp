@@ -1,11 +1,11 @@
-import temperatures from './temperatures';
-import tempButtons from './temp_buttons';
+import temperatures from '../toggle/temperatures';
+import tempButtons from '../toggle/temp_buttons';
 
 const firstRow = (value) => {
   const container = document.createElement('div');
   container.classList.add('border-top', 'mb-3');
 
-  const titleContainer  = document.createElement('div')
+  const titleContainer = document.createElement('div');
   titleContainer.classList.add('pt-3', 'mb-3', 'd-flex', 'justify-content-between');
 
   const title = document.createElement('h4');
