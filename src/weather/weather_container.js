@@ -13,7 +13,7 @@ const weatherContainer = (value) => {
   city.classList.add('d-flex', 'align-items-end', 'ml-3');
 
   const img = document.createElement('img');
-  img.src = 'http://openweathermap.org/img/w/' + value.weather[0].icon + '.png';
+  img.src = `http://openweathermap.org/img/w/${value.weather[0].icon}.png`;
 
   const country = document.createElement('h3');
   country.classList.add('d-flex', 'text-secondary', 'align-items-end', 'ml-3');
