@@ -1,11 +1,56 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>WeatherApp</title>
   </head>
   <body>
 
-    <div class="bg-dark">Some text over here</div>
+    <nav class="d-flex justify-content-between bg-dark px-3 py-2 sticky-top">
+      <h1 class="h3 d-flex align-items-center">
+        <a href="index.html" class="text-light text-decoration-none">WeatherApp</a>
+      </h1>
+      <div class="d-flex">
+        <span class="text-light pt-2 mr-3">Fill in the city and hit "Go!"</span>
+        <div class="form-group m-0 d-flex align-items-center">
+          <input class="form-control m-0" placeholder="City name" id="search_input">
+          <div id="search_button" class="btn btn-info ml-3 px-4">Go!</div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-3">
+      <div class="border rounded p-3 mb-3">
+        <h1 class="text-dark text-center">Welcome to WeatherApp!</h1>
+        <h3 class="text-dark text-center">We'll help you find out about the weather in any city you'd like!</h3>
+      </div>
+
+      <div id="main-container"></div>
+
+      <div class="modal" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-center bg-dark text-light p-2 fixed-bottom">
+      <small>
+        WeatherApp - Tadeu A Sarro 2020
+      </small>
+    </footer>
 
     <script src="main.js"></script>
   </body>
