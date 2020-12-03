@@ -19,7 +19,7 @@ const myFunction = () => {
 
         return true;
       })
-      .catch(() => {
+      .catch((error) => {
         alert('Invalid city, please try again!');
       });
   });

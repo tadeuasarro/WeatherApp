@@ -1,40 +1,26 @@
+import temperatures from './temperatures';
+import tempButtons from './temp_buttons';
+
 const firstRow = (value) => {
   const container = document.createElement('div');
   container.classList.add('border-top', 'mb-3');
 
+  const titleContainer  = document.createElement('div')
+  titleContainer.classList.add('pt-3', 'mb-3', 'd-flex', 'justify-content-between');
+
   const title = document.createElement('h4');
-  title.classList.add('pt-3', 'mb-3');
   title.innerHTML = 'Temperatures';
 
-  container.appendChild(title);
+  titleContainer.appendChild(title);
+  titleContainer.appendChild(tempButtons(value));
+  container.appendChild(titleContainer);
 
-  const row = document.createElement('div');
-  row.classList.add('row', 'px-3');
+  const tempContainer = document.createElement('div');
+  tempContainer.id = 'temp_container';
 
-  const valueInfo = [
-    { label: 'Feels like:', content: value.main.feels_like },
-    { label: 'Temperature:', content: value.main.temp },
-    { label: 'Max temp:', content: value.main.temp_max },
-    { label: 'Min temp:', content: value.main.temp_min },
-  ];
+  tempContainer.appendChild(temperatures(value, false));
 
-  for (let i = 0; i < valueInfo.length; i += 1) {
-    const smallContainer = document.createElement('div');
-    smallContainer.classList.add('col-3', 'd-flex', 'justify-content-between', 'py-3', 'border');
-
-    const label = document.createElement('span');
-    label.innerHTML = valueInfo[i].label;
-
-    const info = document.createElement('span');
-    info.innerHTML = `${valueInfo[i].content}°C`;
-
-    smallContainer.appendChild(label);
-    smallContainer.appendChild(info);
-
-    row.appendChild(smallContainer);
-  }
-
-  container.appendChild(row);
+  container.appendChild(tempContainer);
 
   return container;
 };
